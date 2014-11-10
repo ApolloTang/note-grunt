@@ -1,0 +1,14 @@
+$ npm init
+$ npm install grunt --save-dev
+$ cat > Gruntfile.js
+module.exports = function(grunt){
+    grunt.registerTask('default', function(){
+            grunt.logwriteln('hello');
+    });
+};
+^D
+$ grunt
+
+
+
+
