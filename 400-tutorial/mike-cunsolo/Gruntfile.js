@@ -28,11 +28,24 @@ module.exports = function(grunt){
         }, // End :: htmlhint
         // to run the above type : grunt htmlhint
 
+        uglify: {
+            build: {
+                files: {
+                    'build/js/base.min.js': ['assets/js/base.js']
+                }
+            }
+        },
+
         watch: {
             html: {
                 files: ['index.html'],
                 tasks: ['htmlhint']
-            }
+            },
+            js: {
+                    files: ['assets/js/base.js'],
+                    tasks: ['uglify']
+                }
+
         } // End :: watch
         // to run the above type : grunt watch
 
