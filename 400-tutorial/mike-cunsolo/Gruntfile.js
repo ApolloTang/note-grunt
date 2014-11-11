@@ -25,9 +25,19 @@ module.exports = function(grunt){
                 },
                 src: ['index.html']
             }
-        } // End :: htmlhint
+        }, // End :: htmlhint
         // to run the above type : grunt htmlhint
-    });
+
+        watch: {
+            html: {
+                files: ['index.html'],
+                tasks: ['htmlhint']
+            }
+        } // End :: watch
+        // to run the above type : grunt watch
+
+
+    }); // End :: grunt.initConfig
 
     grunt.registerTask('default', []);
 
