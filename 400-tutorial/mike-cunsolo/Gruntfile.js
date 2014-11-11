@@ -76,9 +76,13 @@ module.exports = function(grunt){
                     tasks: ['htmlhint']
                 },
                 js: {
-                        files: ['assets/js/base.js'],
-                        tasks: ['uglify']
-                    }
+                    files: ['assets/js/base.js'],
+                    tasks: ['uglify']
+                },
+                css: {
+                    files: ['assets/sass/**/*.scss'],
+                    tasks: ['buildcss']
+                }
 
             } // End :: watch
             // to run the above type : grunt watch
