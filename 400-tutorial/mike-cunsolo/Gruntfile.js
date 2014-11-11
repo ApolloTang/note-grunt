@@ -10,32 +10,35 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
 
 
-        htmlhint: {  // <--- plugin's name without the "grunt-contribe-" prefix
-            build: {  // <--- target ?
-                options: {
-                    'tag-pair': true,
-                    'tagname-lowercase': true,
-                    'attr-lowercase': true,
-                    'attr-value-double-quotes': true,
-                    'doctype-first': true,
-                    'spec-char-escape': true,
-                    'id-unique': true,
-                    'head-script-disabled': true,
-                    'style-disabled': true
-                },
-                src: ['index.html']
-            }
-        }, // End :: htmlhint
-        // to run the above type : grunt htmlhint
+        // -- html -- //
+
+            htmlhint: {  // <--- plugin's name without the "grunt-contribe-" prefix
+                build: {  // <--- target ?
+                    options: {
+                        'tag-pair': true,
+                        'tagname-lowercase': true,
+                        'attr-lowercase': true,
+                        'attr-value-double-quotes': true,
+                        'doctype-first': true,
+                        'spec-char-escape': true,
+                        'id-unique': true,
+                        'head-script-disabled': true,
+                        'style-disabled': true
+                    },
+                    src: ['index.html']
+                }
+            }, // End :: htmlhint
+            // to run the above type : grunt htmlhint
 
         // -- Javascript -- //
-        uglify: {
-            build: {
-                files: {
-                    'build/js/base.min.js': ['assets/js/base.js']
+
+            uglify: {
+                build: {
+                    files: {
+                        'build/js/base.min.js': ['assets/js/base.js']
+                    }
                 }
-            }
-        },
+            },
 
         // -- CSS -- //
 
