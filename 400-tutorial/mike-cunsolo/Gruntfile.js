@@ -28,6 +28,7 @@ module.exports = function(grunt){
         }, // End :: htmlhint
         // to run the above type : grunt htmlhint
 
+        // -- Javascript -- //
         uglify: {
             build: {
                 files: {
@@ -36,22 +37,56 @@ module.exports = function(grunt){
             }
         },
 
-        watch: {
-            html: {
-                files: ['index.html'],
-                tasks: ['htmlhint']
-            },
-            js: {
-                    files: ['assets/js/base.js'],
-                    tasks: ['uglify']
-                }
+        // -- CSS -- //
 
-        } // End :: watch
-        // to run the above type : grunt watch
+            sass: {
+                build: {
+                    files: {
+                        'build/css/master.css': 'assets/sass/master.scss'
+                    }
+                }
+            },
+
+            cssc: {
+                build: {
+                    options: {
+                        consolidateViaDeclarations: true,
+                        consolidateViaSelectors:    true,
+                        consolidateMediaQueries:    true
+                    },
+                    files: {
+                        'build/css/master.css': 'build/css/master.css'
+                    }
+                }
+            },
+
+            cssmin: {
+                build: {
+                    src: 'build/css/master.css',
+                    dest: 'build/css/master.css'
+                }
+            },
+
+
+
+        // -- watch -- //
+            watch: {
+                html: {
+                    files: ['index.html'],
+                    tasks: ['htmlhint']
+                },
+                js: {
+                        files: ['assets/js/base.js'],
+                        tasks: ['uglify']
+                    }
+
+            } // End :: watch
+            // to run the above type : grunt watch
 
 
     }); // End :: grunt.initConfig
 
     grunt.registerTask('default', []);
+    grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
 
 };
