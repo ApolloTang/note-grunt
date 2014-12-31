@@ -44,13 +44,9 @@ module.exports = function(grunt){
                 grunt.log.writeln('>> >> recursiveCopy', source, destination, item )
                 if (grunt.file.isDir(source)){
                     grunt.file.mkdir(destination);
-                    grunt.file.recurse(source, function(sourceFileWithFullPath){
-                        var fragments = sourceFileWithFullPath.split('/');
-                        var fileName = fragments.pop()
-                        grunt.log.writeln('>> >> >> recurse'
-                                , source, destination, sourceFileWithFullPath, fragments, fileName)
-
-                        recursiveCopy(sourceFileWithFullPath, destination, fileName);
+                    grunt.file.recurse(source, function(abspath, rootdir, subdir, filename ){
+                        grunt.log.writeln('>> >> >> recurse' , source, destination, abspath, filename);
+                        recursiveCopy(abspath, destination, filename);
                     });
                 } else {
                     grunt.log.writeln('check: ', destination, grunt.file.isDir(destination), item);
