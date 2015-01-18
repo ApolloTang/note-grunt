@@ -1,0 +1,39 @@
+==============================================
+1.1
+
+$ mkdir project1
+$ cd project1
+$ npm init
+$ npm install grunt --save-dev
+$ npm install grunt-contrib-jshint --save-dev
+
+$ npm install -g grunt-init
+
+=================================================
+1.2
+
+$ mkdir ~/.git-init
+$ git clone https://github.com/gruntjs/grunt-init-jquery.git ~/.grunt-init/jquery
+$ cd project1
+
+$ grunt-init jquery
+Please answer the following:
+[?] Project name (01) myBestJqueryPlugin
+[?] Project title (MybestjQueryplugin) My Best jQuery Plugin
+[?] Description (The best jQuery plugin ever.) blah blah
+[?] Version (0.1.0)
+[?] Project git repository (git://bitbucket.org/apollotang/lights-home.git)
+[?] Project homepage (none)
+[?] Project issues tracker (none)
+[?] Licenses (MIT)
+[?] Author name (Apollo Tang)
+[?] Author email (tang.apollo@gmail.com)
+[?] Author url (none)
+[?] Required jQuery version (*)
+[?] Do you need to make any changes to the above before continuing? (y/N)
+
+$ cat package.json
+
+$ npm install
+
+
