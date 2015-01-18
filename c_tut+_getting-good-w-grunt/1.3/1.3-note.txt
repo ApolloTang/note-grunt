@@ -1,0 +1,33 @@
+==============================================
+1.3
+
+
+$ mkdir 1.3
+$ cd 1.3
+$ npm init
+$ npm install grunt --save-dev
+$ npm install grunt-contrib-uglify --save-dev
+$ gvim Gruntfile.js
+
+$ mkdr src/
+$ gvim src/app_1.js src/app_2.js src/util.js
+
+$ grunt uglify
+Running "uglify:target_1" (uglify) task
+>> 1 sourcemap created.
+>> 1 file created.
+
+Running "uglify:target_2" (uglify) task
+>> 1 sourcemap created.
+>> 1 file created.
+
+$ cat dist/app.min.js
+$ cat dist/util.min.js
+
+$ grunt uglify:target_2
+Running "uglify:target_2" (uglify) task
+>> 1 sourcemap created.
+>> 1 file created.
+
+
+
