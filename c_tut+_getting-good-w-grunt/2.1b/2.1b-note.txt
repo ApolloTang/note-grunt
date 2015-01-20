@@ -1,0 +1,19 @@
+==============================================
+2.1a
+
+$ npm install grunt-contrib-jshint --save-dev
+$ grunt jshint
+
+===============================================
+2.1a 03:16
+
+$ gvim .jshintrc Gruntfile.js
+$ grunt jshint
+
+===============================================
+2.1b 04:12
+
+$ npm install grunt-contrib-concat --save-dev
+$ gvim Gruntfile.js
+$ grunt concat
+
