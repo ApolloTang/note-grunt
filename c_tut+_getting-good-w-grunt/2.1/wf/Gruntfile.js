@@ -22,22 +22,23 @@ module.exports = function(grunt) {
         },
         jshint: {
             options: {
-                eqeqeq: true,
-                curly: true,
-                undef: true,
-                unused: false,
-                "globals": {
-                    "module" : true,
-                    "console": true
-                        // so it won't complain about console.log
-                        // http://stackoverflow.com/questions/16336556/grunt-contrib-jshint-dont-complain-about-console-log
-                }
+                jshintrc: ".jshintrc"
+                    // eqeqeq: true,
+                    // curly: true,
+                    // undef: true,
+                    // unused: false,
+                    // "globals": {
+                    //     "module" : true,
+                    //     "console": true
+                    //         // so it won't complain about console.log
+                    //         // http://stackoverflow.com/questions/16336556/grunt-contrib-jshint-dont-complain-about-console-log
+                    // }
             },
             target: {
                 src: "src/*.js"
             }
         }
-    })
+    });
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-}
+};

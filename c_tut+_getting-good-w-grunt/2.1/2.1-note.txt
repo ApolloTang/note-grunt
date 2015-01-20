@@ -4,6 +4,11 @@
 $ npm install grunt-contrib-jshint --save-dev
 $ grunt jshint
 
+===============================================
+2.1 03:16
+
+$ gvim .jshintrc Gruntfile.js
+$ grunt jshint
 
 
 

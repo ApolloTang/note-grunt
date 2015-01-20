@@ -1,0 +1,10 @@
+{
+    "eqeqeq": true,
+    "curly": true,
+    "undef": true,
+    "unused": false,
+    "globals": {
+        "module": true,
+        "console": true
+    }
+}
