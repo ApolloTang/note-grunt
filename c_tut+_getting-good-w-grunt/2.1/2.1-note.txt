@@ -1,0 +1,11 @@
+==============================================
+2.1
+
+$ npm install grunt-contrib-jshint --save-dev
+$ grunt jshint
+
+
+
+
+
+
